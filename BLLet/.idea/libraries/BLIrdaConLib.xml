@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="BLIrdaConLib">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/dnasdk/libs/BLIrdaConLib.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
