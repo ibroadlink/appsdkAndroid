@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 26.0.2">
+
+    <issue
+        id="GradleCompatible"
+        severity="Error"
+        message="This support library should not use a different version (21) than the `compileSdkVersion` (23)"
+        category="Correctness"
+        priority="8"
+        summary="Incompatible Gradle Versions"
+        explanation="There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your `targetSdkVersion`.)"
+        errorLine1="    compile &apos;com.android.support:support-annotations:21.0.2&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/build.gradle"
+            line="48"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="90"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="187"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="291"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="396"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="532"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="643"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return sb.toString().toLowerCase();"
+        errorLine2="                             ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLCommonTools.java"
+            line="41"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return language.toString().toLowerCase();"
+        errorLine2="                                   ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLCommonTools.java"
+            line="293"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            jTask.put(&quot;time&quot;, String.format(&quot;%d-%d-%d %d:%d:%d&quot;, task.getYear(), task.getMonth(), task.getDay(), task.getHour(), task.getMin(), task.getSec()));"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLControllerImpl.java"
+            line="1262"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            jTask.put(&quot;time&quot;, String.format(&quot;%d:%d:%d&quot;, task.getHour(), task.getMin(), task.getSec()));"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLControllerImpl.java"
+            line="1289"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            jTask.put(&quot;time&quot;, String.format(&quot;%d:%d:%d&quot;, task.getStart_hour(), task.getStart_min(), task.getStart_sec()));"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLControllerImpl.java"
+            line="1322"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            jTask.put(&quot;endtime&quot;, String.format(&quot;%d:%d:%d&quot;, task.getEnd_hour(), task.getEnd_min(), task.getEnd_sec()));"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLControllerImpl.java"
+            line="1323"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="         return String.format(&quot;%02d%02d%02d&quot;, hour, min, sec);"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDateUtils.java"
+            line="40"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="          return String.format(&quot;%04d%02d%02d-%02d%02d%02d&quot;, (date.getYear() + 1900),"
+        errorLine2="                 ^">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDateUtils.java"
+            line="51"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return String.format(&quot;%04d-%02d-%02d %02d:%02d:%02d&quot;, year, month, day, hour, min, sec);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDateUtils.java"
+            line="66"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return String.format(&quot;%02d:%02d&quot;, hour, min);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDateUtils.java"
+            line="183"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return String.format(&quot;%02d:%02d:%02d&quot;, hour, min, second);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDateUtils.java"
+            line="195"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return dateToMillis(String.format(&quot;%d-%d-%d %d:%d:%d&quot;, year, month, date, hour, min, sec));"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDateUtils.java"
+            line="272"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="        return String.format(&quot;LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]&quot;,"
+        errorLine2="               ^">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLLruCacheV4.java"
+            line="324"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            if (&quot;https&quot;.equals(url.getProtocol().toLowerCase())) {"
+        errorLine2="                                                 ~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLPyramidHttpAccessor.java"
+            line="43"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                            mPhoneInfo.coordinate = String.format(&quot;%.02f,%.02f&quot;, longitude, latitude);"
+        errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLPyramidImpl.java"
+            line="368"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 9 (current min is 8): `new java.util.AbstractMap.SimpleEntry`"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on *all* versions targeted by this application (according to its minimum SDK attribute in the manifest).
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.
+
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+
+If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-vNN` folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.
+
+Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="            super(iterator);"
+        errorLine2="            ~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/org/liquidplayer/webkit/javascriptcore/JSArray.java"
+            line="704"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 11 (current min is 8): `android.os.AsyncTask#executeOnExecutor`"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on *all* versions targeted by this application (according to its minimum SDK attribute in the manifest).
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.
+
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+
+If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-vNN` folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.
+
+Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                    JSException e = new JSTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, runnable).get();"
+        errorLine2="                                                 ~~~~~~~~~~~~~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/org/liquidplayer/webkit/javascriptcore/JSValue.java"
+            line="94"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Field requires API level 11 (current min is 8): `android.os.AsyncTask#THREAD_POOL_EXECUTOR`"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on *all* versions targeted by this application (according to its minimum SDK attribute in the manifest).
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.
+
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+
+If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-vNN` folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.
+
+Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                    JSException e = new JSTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, runnable).get();"
+        errorLine2="                                                                             ~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/org/liquidplayer/webkit/javascriptcore/JSValue.java"
+            line="94"
+            column="78"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 11 (current min is 8): `android.os.AsyncTask#executeOnExecutor`"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on *all* versions targeted by this application (according to its minimum SDK attribute in the manifest).
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.
+
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+
+If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-vNN` folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.
+
+Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                new JSTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, runnable);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/org/liquidplayer/webkit/javascriptcore/JSValue.java"
+            line="109"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Field requires API level 11 (current min is 8): `android.os.AsyncTask#THREAD_POOL_EXECUTOR`"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on *all* versions targeted by this application (according to its minimum SDK attribute in the manifest).
+
+If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.
+
+If your code is *deliberately* accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.
+
+If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-vNN` folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.
+
+Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="                new JSTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, runnable);"
+        errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio,adt">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/org/liquidplayer/webkit/javascriptcore/JSValue.java"
+            line="109"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdkVersion 23"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/build.gradle"
+            line="11"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="Registered"
+        severity="Warning"
+        message="The `&lt;activity> cn.com.broadlink.sdk.BLPyramidActivity` is not registered in the manifest"
+        category="Correctness"
+        priority="6"
+        summary="Class is not registered in the manifest"
+        explanation="Activities, services and content providers should be registered in the `AndroidManifest.xml` file using `&lt;activity>`, `&lt;service>` and `&lt;provider>` tags.
+
+If your activity is simply a parent class intended to be subclassed by other &quot;real&quot; activities, make it an abstract class."
+        url="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        urls="http://developer.android.com/guide/topics/manifest/manifest-intro.html"
+        errorLine1="public class BLPyramidActivity extends Activity {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLPyramidActivity.java"
+            line="9"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        severity="Warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        category="Correctness"
+        priority="6"
+        summary="Implied locale in date format"
+        explanation="Almost all callers should use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()` to get a ready-made instance of SimpleDateFormat suitable for the user&apos;s locale. The main reason you&apos;d create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).
+
+Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing."
+        url="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        urls="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        errorLine1="        mFormat = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);"
+        errorLine2="                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLPyramidImpl.java"
+            line="107"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        severity="Warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        category="Correctness"
+        priority="6"
+        summary="Implied locale in date format"
+        explanation="Almost all callers should use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()` to get a ready-made instance of SimpleDateFormat suitable for the user&apos;s locale. The main reason you&apos;d create an instance this class directly is because you need to format/parse a specific machine-readable format, in which case you almost certainly want to explicitly ask for US to ensure that you get ASCII digits (rather than, say, Arabic digits).
+
+Therefore, you should either use the form of the SimpleDateFormat constructor where you pass in an explicit locale, such as Locale.US, or use one of the get instance methods, or suppress this error if really know what you are doing."
+        url="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        urls="http://developer.android.com/reference/java/text/SimpleDateFormat.html"
+        errorLine1="            SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLPyramidTask.java"
+            line="108"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:support-annotations than 21.0.2 is available: 25.3.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &apos;com.android.support:support-annotations:21.0.2&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/build.gradle"
+            line="48"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ParcelClassLoader"
+        severity="Warning"
+        message="Using the default class loader will not work if you are restoring your own classes. Consider using for example `readBundle(getClass().getClassLoader())` instead."
+        category="Correctness"
+        priority="3"
+        summary="Default Parcel Class Loader"
+        explanation="The documentation for `Parcel#readParcelable(ClassLoader)` (and its variations) says that you can pass in `null` to pick up the default class loader. However, that ClassLoader is a system class loader and is not able to find classes in your own application.
+
+If you are writing your own classes into the `Parcel` (not just SDK classes like `String` and so on), then you should supply a `ClassLoader` for your application instead; a simple way to obtain one is to just call `getClass().getClassLoader()` from your own class."
+        url="http://developer.android.com/reference/android/os/Parcel.html"
+        urls="http://developer.android.com/reference/android/os/Parcel.html"
+        errorLine1="            Bundle bundle = in.readBundle();"
+        errorLine2="                               ~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/data/controller/BLStdData.java"
+            line="86"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLAllFamilyInfoResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLAllFamilyInfoResult.java"
+            line="13"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLBaseBodyResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLBaseBodyResult.java"
+            line="9"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLControllerDNAControlResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/BLControllerDNAControlResult.java"
+            line="8"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLDefineRoomTypeResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLDefineRoomTypeResult.java"
+            line="12"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyBaseInfoListResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyBaseInfoListResult.java"
+            line="15"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyConfigedDevicesResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyConfigedDevicesResult.java"
+            line="12"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyElectricityInfoResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyElectricityInfoResult.java"
+            line="12"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyIdListGetResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyIdListGetResult.java"
+            line="15"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyInfoResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyInfoResult.java"
+            line="12"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyInviteQrcodeGetResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyInviteQrcodeGetResult.java"
+            line="9"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyInvitedQrcodePostResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyInvitedQrcodePostResult.java"
+            line="9"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLFamilyMemberInfoGetResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLFamilyMemberInfoGetResult.java"
+            line="13"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLGetAPListResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/data/controller/BLGetAPListResult.java"
+            line="13"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLIRCodeDataResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLIRCodeDataResult.java"
+            line="10"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLIRCodeInfoResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLIRCodeInfoResult.java"
+            line="16"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLManageRoomResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLManageRoomResult.java"
+            line="9"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLModuleControlResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/family/BLModuleControlResult.java"
+            line="9"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="class BLProbeDevice extends BLDNADevice {"
+        errorLine2="      ~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLProbeDevice.java"
+            line="13"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLQueryDeviceStatusResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLQueryDeviceStatusResult.java"
+            line="11"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLQueryResoureVersionResult extends BLBaseResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLQueryResoureVersionResult.java"
+            line="11"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLStdControlParam extends BLStdData {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/param/controller/BLStdControlParam.java"
+            line="8"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLSubDevAddResult extends BLSubdevResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLSubDevAddResult.java"
+            line="7"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ParcelCreator"
+        severity="Error"
+        message="This class implements `Parcelable` but does not provide a `CREATOR` field"
+        category="Correctness"
+        priority="3"
+        summary="Missing Parcelable `CREATOR` field"
+        explanation="According to the `Parcelable` interface documentation, &quot;Classes implementing the Parcelable interface must also have a static field called `CREATOR`, which is an object implementing the `Parcelable.Creator` interface.&quot;"
+        url="http://developer.android.com/reference/android/os/Parcelable.html"
+        urls="http://developer.android.com/reference/android/os/Parcelable.html"
+        errorLine1="public class BLSubDevListResult extends BLSubdevResult {"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/result/controller/BLSubDevListResult.java"
+            line="7"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="TrulyRandom"
+        severity="Warning"
+        message="Potentially insecure random numbers on Android 4.3 and older. Read https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html for more info."
+        category="Security"
+        priority="9"
+        summary="Weak RNG"
+        explanation="Key generation, signing, encryption, and random number generation may not receive cryptographically strong values due to improper initialization of the underlying PRNG on Android 4.3 and below.
+
+If your application relies on cryptographically secure random number generation you should apply the workaround described in https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html .
+
+This lint rule is mostly informational; it does not accurately detect whether cryptographically secure RNG is required, or whether the workaround has already been applied. After reading the blog entry and updating your code if necessary, you can disable this lint issue."
+        url="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        urls="https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html"
+        errorLine1="                sc.init(null, trustManagers, new java.security.SecureRandom());"
+        errorLine2="                                                               ~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLBaseHttpAccessor.java"
+            line="96"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers."
+        errorLine1="    public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLAccountTrustManager.java"
+            line="15"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers."
+        errorLine1="    public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLPyramidTrustManager.java"
+            line="19"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        severity="Warning"
+        message="This `Cursor` should be freed up after use with `#close()`"
+        category="Performance"
+        priority="7"
+        summary="Missing `recycle()` calls"
+        explanation="Many resources, such as TypedArrays, VelocityTrackers, etc., should be recycled (with a `recycle()` call) after use. This lint check looks for missing `recycle()` calls."
+        errorLine1="                Cursor cursor = mDB.query(BLPyramidDBHelper.TABLE_NAME, new String[]{BLPyramidDBHelper.COLUMN_id, BLPyramidDBHelper.COLUMN_TYPE, BLPyramidDBHelper.COLUMN_DATA}, null, null, null, null, null, limit &lt;= 0 ? null : String.valueOf(limit));"
+        errorLine2="                                    ~~~~~">
+        <location
+            file="/Users/zhujunjie/Work/Broadlink/sdk/branches/zjj/Let_Android/dnasdk/src/main/java/cn/com/broadlink/sdk/BLDataManager.java"
+            line="108"
+            column="37"/>
+    </issue>
+
+</issues>
